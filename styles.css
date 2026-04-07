@@ -1,0 +1,198 @@
+/* CSS Resets */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+#background, #backgroundDark {
+    position: absolute;
+    /* left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+/* Page styling */
+body {
+    color: rgb(20, 19, 19);
+    transition: all 2s;
+    font-family: "Patrick Hand", cursive;
+    max-width: 1200px;
+    max-height: 750px;
+    margin: 0 auto 0 auto;
+    align-items: center;
+    position: relative;
+    text-transform: uppercase;
+}
+
+body.switch {
+    background-color: rgb(235, 235, 235);
+    color: rgb(235, 235, 235);;
+    
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    /* make sure the columns don't get too small and text stays readable */
+    min-width: 750px;
+    margin: 0;
+    padding-top: 0;
+}
+
+header {
+    position: absolute;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+    text-transform: uppercase;
+}
+
+/* #banner {
+    position: relative;
+    display: flex;
+    width: 1100px;
+    height: 250px;
+    margin: auto;
+    background-color: rgb(235, 235, 235);
+    color: #333;
+    overflow: hidden;
+    display: grid;
+	place-items: center;
+} */
+
+/* #banner.switch {
+    background-color: #333;
+    color: rgb(235, 235, 235);
+    transition: all 2s;
+} */
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto 0 auto;
+    position: absolute;
+    min-width: 1200px;
+    min-height: 750px;
+    /* align-content: center; */
+    /* left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+
+}
+
+#research {
+    margin-right: auto;
+}
+
+
+#sectionContainer{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    justify-content: space-between;
+}
+
+
+
+main section {
+    flex: 1;
+    /* border: 1px rgb(235, 235, 235) dashed; */
+    margin: 0 .25em;
+    max-width: 150px;
+    padding-left: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav ol, nav ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+section li {
+    padding-left: 1.2em;
+}
+
+section a {
+    line-height: 1.1em;
+    display: inline-block;
+    padding: .5em;
+    color: rgb(20, 19, 19);
+}
+
+section a:hover {
+    background-color: orange;
+    color: #333;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline-block;
+}
+
+li {
+    text-indent: -10px;
+}
+
+ul, ol {
+    list-style-image: url(images/x.svg);
+    color: white;
+}
+
+section.switch ul{
+    filter: invert();
+}
+
+section.switch ol{
+    filter: invert();
+}
+
+section.switch a {
+    color: rgb(20, 19, 19);
+}
+
+section.switch a:hover {
+    background-color: #d82f2f;
+    color: rgb(235, 235, 235);
+}
+
+button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 12px;
+    background-color: orange;
+    color: #333;
+    border: 1px solid transparent;
+}
+
+button:hover {
+    background-color: coral;
+    cursor: pointer;
+}
+
+button.switch {
+    background-color: rgb(235, 235, 235);
+    border-color: #333;
+}
+
+button.switch:hover {
+    background-color: #333;
+    color: rgb(235, 235, 235)
+}
