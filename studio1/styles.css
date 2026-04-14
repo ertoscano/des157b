@@ -1,0 +1,51 @@
+#poem {
+    position: absolute;
+}
+
+body{
+    background-color: rgb(29, 30, 31);
+}
+
+#line1 {
+    bottom: 0%;
+    left: 0%;
+}
+
+video {
+    clip-path: ellipse(200px 200px at 25% 75%);
+    clip-path: ellipse(150px 150px at 31% 35%);
+}
+
+#img1 {
+    bottom: 10%;
+    left: 10%;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.showing {
+    opacity: 1;
+}
+
+#myVideo {
+    position: absolute;
+    right: 15%;
+    bottom: 10%;
+    min-width: 70%;
+    min-height: 70%;
+    /* filter: grayscale(40%) sepia(20%) brightness(80%) invert(1); */
+}
+
+.fa-expand {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 36px;
+    color: rgb(0, 255, 26);
+}
+
+.fa-expand:hover {
+    cursor: pointer;
+}
