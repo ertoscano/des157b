@@ -1,39 +1,43 @@
-// (function () {
-//     'use strict';
-//     console.log('js running');
+(function () {
+    'use strict';
+    console.log('js running');
 
-//     const section = document.querySelector('#poem');
-//     const line1 = document.querySelector('#line1');
-//     const img1 = document.querySelector('#img1');
-//     const fs = document.querySelector('.fas');
+    const section = document.querySelector('#poem');
+    const line1 = document.querySelector('#line1');
+    const videoHover = document.querySelector('#myVideo');
 
-//     const intervalID = setInterval(checkTime, 1000);
 
-//     fs.addEventListener('click', function () {
+    const loading = document.querySelector('.square');
 
-//             if (!document.fullscreenElement) {
+    myVideo.addEventListener('playing', function () {
+        loading.style.display = 'none';
+    });
 
-//         document.documentElement.requestFullscreen();
+    videoHover.addEventListener('click', function (){
+        videoHover.className = 'invert';
+    });
 
-//             } else {
+    const intervalID = setInterval(checkTime, 1950);
 
-//         document.exitFullscreen();
+    function checkTime() {
+        if (1 < myVideo.currentTime && myVideo.currentTime < 3.5) {
+        line1.className = 'showing';
+            } else {
+        line1.className = 'hidden';
+            }
 
-//             }
-//         });
+        if (6 < myVideo.currentTime && myVideo.currentTime < 8) {
+            line2.className = 'showing';
+        } else {
+            line2.className = 'hidden';
+        }
 
-//     function checkTime() {
-//             if (1 < myVideo.currentTime && myVideo.currentTime < 3) {
-//         line1.className = 'showing';
-//             } else {
-//         line1.className = 'hidden';
-//             }
+        if (11 < myVideo.currentTime && myVideo.currentTime < 13) {
+            line3.className = 'showing';
+        } else {
+            line3.className = 'hidden';
+        }
 
-//     if (5 < myVideo.currentTime && myVideo.currentTime < 7) {
-//         img1.className = "showing";
-//             } else {
-//         img1.className = 'hidden';
-//             }
-//         }
-
-// })();
+        }
+   
+})();

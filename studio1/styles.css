@@ -1,25 +1,105 @@
-#poem {
-    position: absolute;
-}
-
 body{
     background-color: rgb(29, 30, 31);
 }
 
+#myVideo:hover {
+    cursor: pointer;
+}
+
 #line1 {
-    bottom: 0%;
-    left: 0%;
+    position: absolute;
+    top: 45%;
+    left: 17%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 190, 68);
+}
+
+#line2 {
+    position: absolute;
+    top: 12%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+#line3 {
+    position: absolute;
+    top: 29%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 190, 68);
+}
+
+#line4 {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.invert {
+    filter: grayscale(40%) sepia(20%) brightness(120%) invert(1);
+}
+
+        
+.square {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgb(176, 106, 13);
+    transform: translate(-50%, -50%);
+    animation: bird 2s infinite alternate ease-in-out;
+}
+
+@keyframes bird {
+    0% {
+        opacity: .5;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .5;
+        transform: scale(1.5);
+    }
+}
+
+p {
+    font-family: "Shizuru", system-ui;
+    color: white;
+    font-size: 29px;
+    padding: 20px;
+    border: 5px dotted rgb(176, 176, 176);
 }
 
 video {
     clip-path: ellipse(200px 200px at 25% 75%);
-    clip-path: ellipse(150px 150px at 31% 35%);
+    animation-name: masks;
+    animation-duration: 19.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
-#img1 {
-    bottom: 10%;
-    left: 10%;
+@keyframes masks {
+    0% {clip-path: ellipse(0px 0px at 25% 75%);}
+    10% {clip-path: ellipse(160px 160px at 25% 75%);}
+    11% {clip-path: ellipse(156px 156px at 25% 75%);}
+    13% {clip-path: ellipse(157px 157px at 25% 75%);}
+    25% {clip-path: ellipse(160px 160px at 25% 75%);}
+    35% {clip-path: ellipse(110px 110px at 31% 35%);}
+    55% {clip-path: ellipse(112px 112px at 31% 35%);}
+    60% {clip-path: ellipse(130px 130px at 27% 45%);}
+    78% {clip-path: ellipse(130px 130px at 29% 40%);}
+    80% {clip-path: ellipse(130px 130px at 29% 40%);}
+    83% {clip-path: ellipse(130px 130px at 83% 35%);}
+    88% {clip-path: ellipse(1200px 1200px at 50% 50%);}
+    100% {clip-path: ellipse(1200px 1200px at 50% 50%);}
 }
+
 
 .hidden {
     opacity: 0;
@@ -29,23 +109,9 @@ video {
     opacity: 1;
 }
 
-#myVideo {
-    position: absolute;
-    right: 15%;
-    bottom: 10%;
-    min-width: 70%;
-    min-height: 70%;
-    /* filter: grayscale(40%) sepia(20%) brightness(80%) invert(1); */
-}
-
-.fa-expand {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 36px;
-    color: rgb(0, 255, 26);
-}
-
-.fa-expand:hover {
-    cursor: pointer;
+#videoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }

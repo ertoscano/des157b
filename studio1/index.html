@@ -6,30 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eric's Video Project</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shizuru&display=swap" rel="stylesheet">
+    <!-- style sheet -->
+
     <link href="styles.css" rel="stylesheet">
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    
+    <!-- script -->    
+     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <video id="myVideo" loop autoplay muted playsinline>
-        <source src="media/rabbit-cat-safety_1.webm" >
-        <source src="media/rabbit-cat-safety_1.mp4" type="media/mp4">
 
-        <p>Your browser doesn't support HTML5 video. Here is a <a href="media/rabbit-cat-safety.mp4">link to the video</a>
-            instead.</p>
-    </video>
+    <div id="videoContainer">
+        <video id="myVideo" loop autoplay muted playsinline>
+            <source src="media/rabbit-cat-safety_1.webm">
+            <source src="media/rabbit-cat-safety_1.mp4" type="media/mp4">
+        </video>
 
-    <!-- <i class="fas fa-expand"></i>
+        
+        
 
-    <section id="poem">
-        <p id="line1" class="hidden">Lorem ipsum.</p>
-        <img id="img1" src="images/3f14e443f55948de07930fc044c4ab7a.jpg" alt="wine bottle" class="hidden">
-    </section> -->
+        <section id="poem">
+        <p id="line1" class="hidden">Yummy grass!</p>
+        <p id="line2" class="hidden">That orange thing is not a rabbit...</p>
+        <p id="line3" class="hidden">Hey new friend!</p>
+        <p id="line4" class="hidden">I'm out!</p>
+        </section>
+
+    </div>
+
+    <div class="square"></div>
+    
 </body>
-
-
-
-
 
 </html>
