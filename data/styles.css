@@ -1,0 +1,75 @@
+#container {
+    position: relative;
+    width: 1200px;
+    height: 750px;
+    background-color: rgb(249, 249, 249);
+    margin: 0 auto 0 auto;
+}
+
+h1 {
+    font-family: Rubik Spray Paint;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(158, 205, 251);
+    font-size: 5em;
+    text-align: center;
+    text-shadow: 2px 2px 4px #ecf8ff;
+}
+
+#title {
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    /* background-color: rgb(77, 45, 45); */
+    transform: translate(-50%, -50%);
+}
+
+#progressBar {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    width: 1000px;
+    height: auto;
+    /* background-color: rgb(234, 234, 234); */
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+}
+
+#progressLine {
+    z-index: -1;
+    height: 4px;
+    background-color: #292929;
+    width: 880px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img {
+    width: 20%;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.off {
+    background-color: rgb(158, 205, 251);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: 4px solid #292929;
+}
+
+.on {
+    background-color: rgb(251, 237, 158);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: 4px solid #292929;
+}

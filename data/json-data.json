@@ -1,0 +1,13 @@
+{
+  "water_intake_log": [
+    { "time": "3:30", "water_sips": 1 },
+    { "time": "3:45", "water_sips": 1 },
+    { "time": "4:00", "water_sips": 1 },
+    { "time": "4:15", "water_sips": 1 },
+    { "time": "4:30", "water_sips": 1 },
+    { "time": "4:45", "water_sips": 1 },
+    { "time": "5:00", "water_sips": 0 },
+    { "time": "5:15", "water_sips": 0 },
+    { "time": "5:30", "water_sips": 1 }
+  ]
+}
