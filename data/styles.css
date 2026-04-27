@@ -58,12 +58,13 @@ img {
 }
 
 
-.off {
+.circle {
     background-color: rgb(158, 205, 251);
     border-radius: 50%;
     width: 60px;
     height: 60px;
     border: 4px solid #292929;
+    transition: background-color 0.2s ease;
 }
 
 .on {
@@ -72,4 +73,28 @@ img {
     width: 60px;
     height: 60px;
     border: 4px solid #292929;
+}
+
+#reasons{
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#times {
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+p {
+    font-family: Rubik Spray Paint;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(47, 88, 129);
+    font-size: 1em;
+    text-align: center;
+    text-shadow: 2px 2px 4px #ecf8ff;
 }

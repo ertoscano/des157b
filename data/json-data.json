@@ -1,13 +1,49 @@
+
+
 {
-  "water_intake_log": [
-    { "time": "3:30", "water_sips": 1 },
-    { "time": "3:45", "water_sips": 1 },
-    { "time": "4:00", "water_sips": 1 },
-    { "time": "4:15", "water_sips": 1 },
-    { "time": "4:30", "water_sips": 1 },
-    { "time": "4:45", "water_sips": 1 },
-    { "time": "5:00", "water_sips": 0 },
-    { "time": "5:15", "water_sips": 0 },
-    { "time": "5:30", "water_sips": 1 }
-  ]
+  "point1": {
+    "time": "3:30",
+    "water": 0,
+    "reason": "I was thristy"
+  },
+  "point2": {
+    "time": "3:45",
+    "water": 1,
+    "reason": "I was hungry for some H2O"
+  },
+  "point3": {
+    "time": "4:00",
+    "water": 2,
+    "reason": "was thristy"
+  },
+  "point4": {
+    "time": "4:15",
+    "water": 3,
+    "reason": "water good"
+  },
+  "point5": {
+    "time": "4:30",
+    "water": 4,
+    "reason": "Yummmy Water"
+  },
+  "point6": {
+    "time": "4:45",
+    "water": 5,
+    "reason": "sssssssiiiiiipppppppp The sound is kinda cool"
+  },
+  "point7": {
+    "time": "5:00",
+    "water": 5,
+    "reason": "Don't remember. Didn't feel like it I guess"
+  },
+  "point8": {
+    "time": "5:15",
+    "water": 5,
+    "reason": "I think I was busy looking at my phone"
+  },
+  "point9": {
+    "time": "5:30",
+    "water": 6,
+    "reason": "I thought I would get one last sip in before ending the data collection lol"
+  }
 }
