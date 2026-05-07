@@ -1,0 +1,53 @@
+.text {
+  font-family: "Modak", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 8.5em;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  color: rgb(231, 114, 84);
+  perspective: 800px;
+}
+
+body{
+  background-color: rgb(49, 46, 46);
+}
+
+#information {
+  position: absolute;
+  left: 15%;
+  top: 85%;
+  transform: translate(-50%,-50%);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(255, 255, 255);
+  background-color: rgb(252, 201, 48);
+  padding: 10px;
+}
+
+
+#container {
+    position: relative;
+    margin: 0 auto 0 auto;
+    width: 1200px;
+    height: 750px;
+    background-color: rgb(254, 242, 217);
+}
+
+#canvas-basic{
+  width: 1200px;
+  height: 750px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#body {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0%);
+  filter: blur(2px);
+}
