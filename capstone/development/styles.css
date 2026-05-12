@@ -20,7 +20,7 @@ body {
     padding: 25px;
     border-radius: 2%;
     width: 800px;
-    box-shadow: -5px 20px 15px rgb(239, 239, 239);
+    box-shadow: -5px 20px 15px 0 rgb(239, 239, 239);
 }
 
 h1 {
