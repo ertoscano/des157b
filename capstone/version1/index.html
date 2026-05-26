@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boredom</title>
+
+    <!-- Normalize CSS for browser compatability -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- GOOGLE FONTS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=BBH+Hegarty&family=Borel&family=Modak&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap" rel="stylesheet">
+    <!-- My Styles -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- gsap -->
+    <script src="library/gsap.min.js" defer></script>
+
+    <script src="library/SplitText.min.js" defer></script>
+    <!-- granim -->
+    <script src="library/granim.min.js" defer></script>
+    <!-- My Script -->
+    <script src="script.js" defer></script>
+
+
+
+</head>
+
+<body>
+    <div id="container">
+
+        <canvas id="canvas-basic"></canvas>
+        <div class="text">
+            BOREDOM
+        </div>
+
+        <div id="pleaseBtn">Please!</div>
+
+        <img id="rightArrow" src="assets/right-arrow-ind.svg" width="48" height="87" alt="arrow">
+        <img id="rightArrow2" src="assets/right-arrow-ind.svg" width="48" height="87" alt="arrow">
+        <img id="leftArrow" src="assets/left-arrow-ind.svg" width="48" height="87" alt="arrow">
+        <img id="leftArrow2" src="assets/left-arrow-ind.svg" width="48" height="87" alt="arrow">
+
+        
+<!-- 
+        <div id="information">
+            <p>Text animation through <a href="https://gsap.com/">GSAP</a></p>
+            <p>Gradient animated through <a href="https://sarcadass.github.io/granim.js/">Granim</a></p>
+        </div> -->
+
+        <div id="screen2">
+            <div id="traffic">
+                <img src="assets/traffic-sign.svg" width="617" height="316" alt="traffic light">
+                <div id="person"> <img src="assets/person.svg" width="62" height="139" alt="person"></div>
+                <p id="timer">145</p>
+                <div id="grid"><img src="assets/grid.svg" width="562" height="254" alt="grid"></div>
+            </div>
+            <div id="go" class="show">
+                <img id="goBtn" src="assets/walk-btn.svg" width="125" height="125" alt="walk button">
+            </div>
+        </div>
+        <!-- <div class="overlay" id="modal-overlay">
+            <div class="modal">
+                <span class="mono-label">Your Response</span>
+                <input type="text" id="author-input" class="field" placeholder="Your Initials">
+                <textarea id="message-input" class="field" placeholder="What where you thinking about?"></textarea>
+                <button class="btn-send" id="send-btn">Post</button>
+            </div>
+        </div> -->
+        <div id="controls">
+            <button class="btn-primary" id="open-btn" style="display: show;" >Public Responses</button>
+        </div>
+        <div class="response-section visible" id="response-section" style="display: block;">
+            <span class="script-label">Thoughts.</span>
+            <div class="response-grid" id="response-list">
+                <div class="response-item">
+                    <div class="response-initials">ET</div>
+                    <span class="script-label" id="bored-script">Bored for</span>
+                    <div class="response-time"><span id="seconds">145</span>sec</div>
+                    <div class="response-msg">I'm thinking about sooo much things right now its crazy. This is my thinking right now please enjoy!I'm thinking about sooo much things right now its crazy. This is my thinking right now
+                    please enjoy</div>
+                </div>
+                
+                <div class="response-item">
+                    <!-- <img src="assets/brain.svg" width="168" height="114" id="brain" alt="brain"> -->
+                    <div class="response-initials">ET</div>
+                    <span class="script-label" id="bored-script">Bored for</span>
+                    <div class="response-time"><span id="seconds">145</span>sec</div>
+                    <div class="response-msg">I'm thinking about sooo much things right now its crazy. This is my thinking right now please enjoy!</div>
+                </div>
+
+                <div class="response-item">
+                    <!-- <img src="assets/brain.svg" width="168" height="114" id="brain" alt="brain"> -->
+                    <div class="response-initials">ET</div>
+                    <span class="script-label" id="bored-script">Bored for</span>
+                    <div class="response-time"><span id="seconds">145</span>sec</div>
+                    <div class="response-msg">I'm thinking about sooo much things right now its crazy. This is my thinking right now
+                        please enjoy!</div>
+                </div>
+
+                <div class="response-item">
+                    <!-- <img src="assets/brain.svg" width="168" height="114" id="brain" alt="brain"> -->
+                    <div class="response-initials">GT</div>
+                    <span class="script-label" id="bored-script">Bored for</span>
+                    <div class="response-time"><span id="seconds">145</span>sec</div>
+                    <div class="response-msg">I'm thinking about sooo much things right now its crazy. This is my thinking right now
+                        please enjoy!</div>
+                </div>
+            </div> 
+        </div> 
+    </div>
+
+
+
+</body>
+
+</html>
