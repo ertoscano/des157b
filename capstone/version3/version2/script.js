@@ -72,7 +72,20 @@
     closeBtn.addEventListener('click', () => {
         testingOverlay.classList.add('hidden');
     });
-    
+
+    gsap.set('#close', {
+        autoAlpha: 0,
+    });
+
+    setTimeout(() => {
+        gsap.to('#close', {
+            duration: .5,
+            autoAlpha: 1,
+            // ease: "back.out(.8)"
+        });
+    }, 3000);
+
+
 
     pleaseBtn.addEventListener('click', () => {
 
