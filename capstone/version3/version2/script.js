@@ -5,7 +5,15 @@
 
     Parse.serverURL = 'https://parseapi.back4app.com/';
 
-    gsap.registerPlugin(SplitText);
+    gsap.registerPlugin(SplitText, ScrollToPlugin);
+
+    window.addEventListener('load', () => {
+        window.scrollTo(0, 0);
+    });
+
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
 
     let split = SplitText.create(".text", {
         type: "chars"
@@ -34,13 +42,17 @@
 
     const pleaseBtn = document.querySelector('#pleaseBtn');
 
-    const screen2 = document.querySelector('#screen2');
+    const screen2 = document.querySelector('#waiting-screen');
 
     const title = document.querySelector('#title');
 
     const goBtn = document.querySelector('#goBtn');
 
     const modalOverlay = document.querySelector('#modal-overlay');
+
+    const testingOverlay = document.querySelector('#testing-overlay')
+
+    const closeBtn = document.querySelector('#close');
 
     const sendBtn = document.querySelector('#send-btn');
 
@@ -57,7 +69,20 @@
     let seconds = 0;
     let timerInterval;
 
+    closeBtn.addEventListener('click', () => {
+        testingOverlay.classList.add('hidden');
+    });
+    
+
     pleaseBtn.addEventListener('click', () => {
+
+        document.body.classList.add('lock-scroll');
+
+        openBtn.style.display = 'none';
+
+        document.querySelector('#landing-screen').style.display = 'none';
+        
+
         gsap.to(
             ['#title', '#pleaseBtn', '#rightArrow',
                 '#rightArrow2', '#leftArrow', '#leftArrow2'],
@@ -67,9 +92,9 @@
             }
         );
 
-        screen2.style.display = 'block';
+        screen2.style.display = 'flex';
 
-        gsap.from('#screen2', {
+        gsap.from('#waiting-screen', {
             autoAlpha: 0,
             duration: 3
         });
@@ -79,6 +104,23 @@
 
         startTimer();
 
+        const delay = Math.random() * (120000 - 30000) + 30000;
+
+        gsap.set('#go', {
+            autoAlpha: 0,
+            scale: 0.6,
+            y: 20
+        });
+
+        setTimeout(() => {
+            gsap.to('#go', {
+                duration: .5,
+                autoAlpha: 1,
+                scale: 1,
+                y: 0,
+                ease: "back.out(.8)"
+            });
+        }, delay);
     });
     
     function startTimer() {
@@ -94,6 +136,9 @@
     });
 
     sendBtn.addEventListener('click', async () => {
+
+        document.querySelector('#response-section').style.display = 'block';
+        
         const initials = authorInput.value;
         const message = messageInput.value;
 
@@ -120,6 +165,10 @@
 
             screen2.style.display = 'none';
 
+            document.querySelector('#landing-screen').style.display = 'flex';
+
+            openBtn.style.display = 'block';
+
             gsap.to(
                 ['#title', '#pleaseBtn', '#rightArrow',
                     '#rightArrow2', '#leftArrow', '#leftArrow2'],
@@ -129,13 +178,9 @@
                 }
             );
 
-            // document.querySelector('#response-section')
-            //     .style.display = 'block';
-
         } catch (error) {
 
             console.error(error);
-
         }
 
         screen2.style.display = 'none';
@@ -149,11 +194,17 @@
             }
         );
 
+        document.querySelector('#response-section').style.display = 'block';
+
         gsap.to(window, {
             duration: 1.5,
-            scrollTo: responseSection,
-            ease: 'power2.inOut'
+            scrollTo: "#response-section",
+            ease: 'power2.inOut',
+            onComplete: () => {
+                document.body.classList.remove('lock-scroll');
+            }
         });
+
 
     });
 
@@ -220,20 +271,34 @@
     loadResponses();
 
     openBtn.addEventListener('click', () => {
-        const reponseSection = document.querySelector('#response-section');
 
-        responseSection.style.display = 'flex';
+        
 
-        gsap.from(reponseSection, {
-            y: 150,
+        const responseScreen = document.querySelector('#response-screen');
+
+        document.querySelector('#response-section').style.display = 'block';
+        document.body.classList.remove('lock-scroll');
+
+        document.querySelector('#response-section').style.display = 'block';
+
+        gsap.from('#response-section', {
+            y: 100,
             autoAlpha: 0,
-            duration: 1.2,
+            duration: 1,
             ease: 'power3.out'
         });
 
-        reponseSection.scrollIntoView({
-            behavior: 'smooth'
+
+
+        gsap.to(window, {
+            duration: 1.5,
+            scrollTo: '#response-screen',
+            ease: 'power2.inOut',
+            onComplete: () => {
+                document.body.classList.remove('lock-scroll');
+            }
         });
+
     });
 
     gsap.from('#response-section', {
@@ -245,9 +310,11 @@
 
     gsap.from('#open-btn', {
         scale: 0,
-        rotation: 180,
-        duration: 1,
+        rotation: 10,
+        duration: .4,
         ease: 'back.out(1.7)'
     });
+
+    document.body.classList.add('lock-scroll');
 
 })();

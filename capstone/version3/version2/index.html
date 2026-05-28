@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boredom</title>
+
+    <!-- Normalize CSS for browser compatability -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- GOOGLE FONTS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=BBH+Hegarty&family=Borel&family=Modak&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap" rel="stylesheet">
+    <!-- My Styles -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- gsap -->
+    <script src="library/gsap.min.js" defer></script>
+    <script type="text/javascript" src="https://unpkg.com/parse/dist/parse.min.js"></script>
+    <script src="library/ScrollToPlugin.min.js" defer></script>
+    <script src="library/SplitText.min.js" defer></script>
+    <script src="library/easytimer.min.js" defer></script>
+
+    <!-- My Script -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main id="container">
+    <section id="landing-screen">
+        <div class="text" id="title">BOREDOM</div>
+    
+        <div id="pleaseBtn">Please!</div>
+    
+        <img id="rightArrow" src="assets/right-arrow-ind.svg" width="48" height="87" alt="arrow">
+        <img id="rightArrow2" src="assets/right-arrow-ind.svg" width="48" height="87" alt="arrow">
+        <img id="leftArrow" src="assets/left-arrow-ind.svg" width="48" height="87" alt="arrow">
+        <img id="leftArrow2" src="assets/left-arrow-ind.svg" width="48" height="87" alt="arrow">
+    
+        <div id="controls">
+            <button class="btn-primary" id="open-btn">Public Responses</button>
+        </div>
+    
+    </section>
+    <section id="waiting-screen">
+            <div id="traffic">
+                <img src="assets/traffic-sign.svg" width="617" height="316" alt="traffic light">
+                <div id="person"> <img src="assets/person.svg" width="62" height="139" alt="person"></div>
+                <p id="timer">0</p>
+                <div id="grid"><img src="assets/grid.svg" width="562" height="254" alt="grid"></div>
+            </div>
+            <div id="go" class="show">
+                <img id="goBtn" src="assets/walk-btn.svg" width="125" height="125" alt="walk button">
+            </div>
+    </section>
+    <section id="response-screen">
+        <div class="response-section" id="response-section">
+            <span class="script-label">Thoughts.</span>
+            <div class="response-grid" id="response-list">
+            </div>
+        </div>
+    </section>
+    <div class="overlay hidden" id="modal-overlay">
+        <div class="modal">
+            <span class="mono-label">Your Response</span>
+            <input type="text" id="author-input" class="field" placeholder="Your Initials">
+            <textarea id="message-input" class="field" placeholder="What where you thinking about?"></textarea>
+            <button class="btn-send" id="send-btn">Post</button>
+        </div>
+    </div>
+    <div class="overlay" id="testing-overlay">
+        <div class="testing">
+            <button class="btn-secondary" id="close">close</button>
+            <p>Welcome to my capstone project! I'm pleased to have you here. Please preform the following tasks:</p> <ul>
+                <li>Click the please button</li>
+                <li>Click the walk icon button after you click the please button</li>
+                <li>Reload & click the Public Reponse button</li>
+            </ul>
+            <p>You are awesome!</p>
+            
+        </div>
+        
+    </div>
+
+</main>
+
+</body>
+
+</html>

@@ -3,10 +3,10 @@
     font-weight: 400;
     font-style: normal;
     font-size: 8.5em;
-    left: 50%;
+    /* left: 50%;
     top: 46%;
     transform: translate(-50%, -50%);
-    position: absolute;
+    position: absolute; */
     color: #5697cc;
     perspective: 800px;
 }
@@ -33,22 +33,34 @@ body, html {
 
 
 #container {
-    position: relative;
-    margin: 0 auto 0 auto;
-    display: block;
-    width: 100vw;     
-    min-height: 200vh;
+    width: 100%;
+    overflow-x: hidden;
     background-color: #f7fafc;
 }
 
-#canvas-basic {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+
+#landing-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+    gap: 40px;
 }
+
+#waiting-screen {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+#response-screen {
+    padding: 120px 0;
+}
+
 
 #body {
     position: absolute;
@@ -64,15 +76,10 @@ body, html {
 } */
 
 #traffic {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
 }
 
-#screen2 {
-    display: none;
-}
+
 
 #timer {
     font-family: "Oleo Script Swash Caps", system-ui;
@@ -102,16 +109,16 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    /* position: absolute; */
     width: 333px;
     height: 146px;
     background-color: #5697cc;
     font-family: "Oleo Script Swash Caps", system-ui;
     color: #f7fafc;
     font-size: 86px;
-    top: 60%;
+    /* top: 60%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
     border-radius: 25px;
     box-shadow: 0 10px 0 0 #e9f0f4 ;
     transition: all ease-in-out .2s;
@@ -122,7 +129,7 @@ body, html {
 
 
 #pleaseBtn:hover {
-    transform: translate(-50%, calc(-50% + 10px));
+    transform: translateY(10px);
     background-color: #4b85b4;
     box-shadow: 0 0 0 0 #e9f0f4;
     cursor: pointer;
@@ -192,10 +199,7 @@ body, html {
 }
 
 #go {
-    position: absolute;
-    top: 35%;
-    left: 35%;
-    transform: translate(-50%, -50%);
+    margin-top: 40px;
 }
 
 #goBtn:hover {
@@ -288,14 +292,9 @@ textarea.field {
     background: #4b85b4;
 }
 
-/* .response-section.visible {
-    opacity: 1;
-    margin-top: 20px;
-    padding-bottom: 100px;
-} */
+
 
 .response-section {
-    display: none;
     width: 100%;
     transition: opacity 0.5s ease;
 }
@@ -337,31 +336,6 @@ textarea.field {
     background-color: #dcdfe0;
 }
 
-.response-section.visible {
-    position: absolute;
-    opacity: 1;
-    padding: 0 35px 35px 35px;
-    /* padding-bottom: 100px; */
-    /* background-color: #e9f0f4; */
-    margin: 0 auto 0 auto;
-    /* display: block;
-    width: 100vw;     
-    height: 100vh;  */
-    display: flex;
-}
-
-/* #response-section {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    position: absolute;
-    top: 150%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #5697cc;
-    border-radius: 15px;
-
-} */
 
 #response-section {
 
@@ -451,3 +425,58 @@ textarea.field {
     font-size: 21px;
     font-weight: 700;
 }
+
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.lock-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+html.lock-scroll,
+body.lock-scroll {
+    overflow: hidden;
+}
+
+
+.testing {
+    background-color: #e9f0f4;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    position: relative;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.btn-secondary {
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: "BBH Hegarty", sans-serif;
+    background-color: #5697cc;
+    color: #f7fafc;
+    font-size: 14px;
+    max-width: 90px;
+    margin-left: auto;
+}
+
+.testing p {
+    margin: 15px 5px 5px 5px;
+}
+
+.btn-secondary:hover {
+    background-color: #4b85b4;
+}
+

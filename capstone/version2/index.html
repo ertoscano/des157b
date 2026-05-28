@@ -19,11 +19,16 @@
     <script src="library/gsap.min.js" defer></script>
     <script src="library/SplitText.min.js" defer></script>
     <script src="library/easytimer.min.js" defer></script>
+    <script type="text/javascript" src="https://unpkg.com/parse/dist/parse.min.js"></script>
     <!-- My Script -->
     <script src="script.js" defer></script>
 </head>
 
 <body>
+    <section id="landing-screen"></section>
+    <section id="waiting-screen"></section>
+    <section id="response-screen"></section>
+
     <div id="container">
 
         <canvas id="canvas-basic"></canvas>
@@ -47,37 +52,36 @@
             <div id="traffic">
                 <img src="assets/traffic-sign.svg" width="617" height="316" alt="traffic light">
                 <div id="person"> <img src="assets/person.svg" width="62" height="139" alt="person"></div>
-                <p id="timer">145</p>
+                <p id="timer">0</p>
                 <div id="grid"><img src="assets/grid.svg" width="562" height="254" alt="grid"></div>
             </div>
             <div id="go" class="show">
                 <img id="goBtn" src="assets/walk-btn.svg" width="125" height="125" alt="walk button">
             </div>
         </div>
-        <!-- <div class="overlay" id="modal-overlay">
+        <div class="overlay hidden" id="modal-overlay">
             <div class="modal">
                 <span class="mono-label">Your Response</span>
                 <input type="text" id="author-input" class="field" placeholder="Your Initials">
                 <textarea id="message-input" class="field" placeholder="What where you thinking about?"></textarea>
                 <button class="btn-send" id="send-btn">Post</button>
             </div>
-        </div> -->
+        </div>
         <div id="controls">
             <button class="btn-primary" id="open-btn" style="display: show;" >Public Responses</button>
         </div>
         <div class="response-section visible" id="response-section" style="display: block;">
             <span class="script-label">Thoughts.</span>
             <div class="response-grid" id="response-list">
-                <div class="response-item">
+                <!-- <div class="response-item">
                     <div class="response-initials">ET</div>
                     <span class="script-label" id="bored-script">Bored for</span>
-                    <div class="response-time"><span id="seconds">145</span>sec</div>
+                    <div class="response-time"><span id="seconds">0</span>sec</div>
                     <div class="response-msg">I'm thinking about sooo much things right now its crazy. This is my thinking right now please enjoy!I'm thinking about sooo much things right now its crazy. This is my thinking right now
                     please enjoy</div>
                 </div>
-                
-                <div class="response-item">
-                    <!-- <img src="assets/brain.svg" width="168" height="114" id="brain" alt="brain"> -->
+                 -->
+                <!-- <div class="response-item">
                     <div class="response-initials">ET</div>
                     <span class="script-label" id="bored-script">Bored for</span>
                     <div class="response-time"><span id="seconds">145</span>sec</div>
@@ -85,7 +89,6 @@
                 </div>
 
                 <div class="response-item">
-                    <!-- <img src="assets/brain.svg" width="168" height="114" id="brain" alt="brain"> -->
                     <div class="response-initials">ET</div>
                     <span class="script-label" id="bored-script">Bored for</span>
                     <div class="response-time"><span id="seconds">145</span>sec</div>
@@ -94,13 +97,12 @@
                 </div>
 
                 <div class="response-item">
-                    <!-- <img src="assets/brain.svg" width="168" height="114" id="brain" alt="brain"> -->
                     <div class="response-initials">GT</div>
                     <span class="script-label" id="bored-script">Bored for</span>
                     <div class="response-time"><span id="seconds">145</span>sec</div>
                     <div class="response-msg">I'm thinking about sooo much things right now its crazy. This is my thinking right now
                         please enjoy!</div>
-                </div>
+                </div> -->
             </div> 
         </div> 
     </div>
