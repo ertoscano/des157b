@@ -66,6 +66,8 @@
 
     const fullscreenBtn = document.querySelector('#fullscreen-btn');
 
+    const homeBtn = document.querySelector('#home-btn');
+
     const instructionOverlay = document.querySelector('#instruction-overlay');
 
     const startWaitingBtn = document.querySelector('#start-waiting-btn');
@@ -111,6 +113,32 @@
             // ease: "back.out(.8)"
         });
     }, 3000);
+
+    homeBtn.addEventListener('click', () => {
+
+        gsap.to('#home-btn', {
+            duration: 0.4,
+            y: 50,
+            autoAlpha: 0,
+            ease: 'power2.in',
+            onComplete: () => {
+                homeBtn.style.display = 'none';
+            }
+        });
+
+
+        gsap.to(window, {
+            duration: 1.5,
+            scrollTo: '#landing-screen',
+            ease: 'power2.inOut',
+            onComplete: () => {
+
+                document.querySelector('#response-section').style.display = 'none';
+
+            }
+        });
+
+    });
 
     fullscreenBtn.addEventListener('click', async () => {
 
@@ -229,7 +257,24 @@
     sendBtn.addEventListener('click', async () => {
 
         document.querySelector('#response-section').style.display = 'block';
+
+        setTimeout(() => {
+
+            homeBtn.style.display = 'block';
+
+            gsap.from('#home-btn', {
+                duration: 0.5,
+                scale: 0,
+                rotation: -15,
+                autoAlpha: 0,
+                ease: 'back.out(1.7)'
+            });
+
+        }, 5000); 
+
         
+        openBtn.classList.remove('hidden');
+
         const initials = authorInput.value;
         const message = messageInput.value;
 
@@ -358,6 +403,21 @@
     openBtn.addEventListener('click', () => {
 
 
+        homeBtn.style.display = 'block';
+
+        gsap.fromTo('#home-btn',
+            {
+                scale:.9,
+                autoAlpha: 0
+            },
+            {
+                scale: 1,
+                autoAlpha: 1,
+                duration: 0.5,
+                ease: 'back.out(1.7)'
+            }
+        );
+
         const responseScreen = document.querySelector('#response-screen');
 
         document.querySelector('#response-section').style.display = 'block';
@@ -369,6 +429,8 @@
             duration: 1,
             ease: 'power3.out'
         });
+
+        document.querySelector('#home-btn').style.display = 'block';
 
         gsap.to(window, {
             duration: 1.5,
@@ -402,6 +464,14 @@
         y: 50,
         autoAlpha: 0,
         ease: 'power3.out'
+    });
+
+    gsap.to('#home-btn', {
+        y: -8,
+        duration: 1.5,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut'
     });
 
 })();
